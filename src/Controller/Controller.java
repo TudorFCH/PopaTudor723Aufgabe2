@@ -4,6 +4,7 @@ import Model.Spieler;
 import Model.Verein;
 
 import java.util.*;
+import java.util.stream.Collectors;
 
 public class Controller {
     private final List<Spieler> spieler = new ArrayList<>();
@@ -44,4 +45,10 @@ public class Controller {
     }
 
     public void deleteVereinen(int id) { vereinen.removeIf(s -> s.getId() == id); }
+
+    public List<Verein> filterVereinenNachStadt(String stadt) {
+        return vereinen.stream()
+                .filter(verein -> verein.getStadt().equalsIgnoreCase(stadt))
+                .collect(Collectors.toList());
+    }
 }
