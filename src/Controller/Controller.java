@@ -51,4 +51,11 @@ public class Controller {
                 .filter(verein -> verein.getStadt().equalsIgnoreCase(stadt))
                 .collect(Collectors.toList());
     }
+
+//    public List<Spieler> getSpielerNachVerein(String vereinName) {
+//        return spieler.stream()
+//                .filter(verein -> verein.getSpieler().stream()
+//                        .anyMatch(spieler -> spieler.getName().equalsIgnoreCase()))
+//
+//    }
 }

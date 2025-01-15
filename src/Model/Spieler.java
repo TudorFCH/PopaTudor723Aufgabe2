@@ -45,6 +45,10 @@ public class Spieler {
         this.marktwert = marktwert;
     }
 
+    public void getVerein() {
+
+    }
+
     public String toString() {
         return name + ", " + alter + ", " + position + ", " + marktwert + "$";
     }
