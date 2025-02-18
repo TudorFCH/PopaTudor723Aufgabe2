@@ -42,7 +42,7 @@ public class View {
     private void manageProducts() {
         System.out.println("\n--- Manage Products ---");
         System.out.println("1. Add Product");
-        System.out.println("2. View.View Products");
+        System.out.println("2. View Products");
         System.out.println("3. Update Product");
         System.out.println("4. Delete Product");
         System.out.print("Enter your choice: ");
@@ -95,10 +95,10 @@ public class View {
 
     private void manageCustomers() {
         System.out.println("\n--- Manage Charakters ---");
-        System.out.println("1. Add Customer");
-        System.out.println("2. View.View Customers");
-        System.out.println("3. Update Customer");
-        System.out.println("4. Delete Customer");
+        System.out.println("1. Add Charakter");
+        System.out.println("2. View Charakters");
+        System.out.println("3. Update Character");
+        System.out.println("4. Delete Character");
         System.out.print("Enter your choice: ");
         int choice = scanner.nextInt();
         scanner.nextLine();
@@ -174,58 +174,57 @@ public class View {
     }
 
     public static void main(String[] args) {
-        // Initialisierung der Produkte
-        List<Produkten> produkte = new ArrayList<>();
-        produkte.add(new Produkten("Kunai", 50.0, "Konoha"));
-        produkte.add(new Produkten("Shuriken", 30.0, "Konoha"));
-        produkte.add(new Produkten("Schwert", 200.0, "Kirigakure"));
-        produkte.add(new Produkten("Heiltrank", 100.0, "Sunagakure"));
-        produkte.add(new Produkten("Sprengsiegel", 75.0, "Iwagakure"));
-        produkte.add(new Produkten("Riesenfächer", 300.0, "Sunagakure"));
-        produkte.add(new Produkten("Giftklinge", 150.0, "Kirigakure"));
-        produkte.add(new Produkten("Explosionskugel", 250.0, "Iwagakure"));
-        produkte.add(new Produkten("Schattendolch", 180.0, "Konoha"));
-        produkte.add(new Produkten("Wasserperle", 90.0, "Kirigakure"));
-
-        // Initialisierung der Charaktere
-        List<Charakteren> charaktere = new ArrayList<>();
-
-        Charakteren c1 = new Charakteren(1, "Naruto Uzumaki", "Konoha");
-        
-        c1.addProdukten(produkte.get(3)); // Heiltrank
-        c1.addProdukten(produkte.get(8)); // Schattendolch
-        c1.addProdukten(produkte.get(5)); // Riesenfächer
-
-        Charakteren c2 = new Charakteren(2, "Gaara", "Sunagakure");
-        c2.addProdukten(produkte.get(2)); // Schwert
-        c2.addProdukten(produkte.get(4)); // Sprengsiegel
-        c2.addProdukten(produkte.get(6)); // Giftklinge
-        c2.addProdukten(produkte.get(1)); // Shuriken
-
-        Charakteren c3 = new Charakteren(3, "Kisame Hoshigaki", "Kirigakure");
-        c3.addProdukten(produkte.get(1)); // Shuriken
-        c3.addProdukten(produkte.get(2)); // Schwert
-        c3.addProdukten(produkte.get(3)); // Heiltrank
-        c3.addProdukten(produkte.get(7)); // Explosionskugel
-        c3.addProdukten(produkte.get(9)); // Wasserperle
-
-        Charakteren c4 = new Charakteren(4, "Deidara", "Iwagakure");
-        c4.addProdukten(produkte.get(0)); // Kunai
-        c4.addProdukten(produkte.get(4)); // Sprengsiegel
-        c4.addProdukten(produkte.get(7)); // Explosionskugel
-        c4.addProdukten(produkte.get(9)); // Wasserperle
-
-        Charakteren c5 = new Charakteren(5, "Itachi Uchiha", "Konoha");
-        c5.addProdukten(produkte.get(8)); // Schattendolch
-        c5.addProdukten(produkte.get(6)); // Giftklinge
-        c5.addProdukten(produkte.get(2)); // Schwert
-        c5.addProdukten(produkte.get(7)); // Explosionskugel
-
-        charaktere.add(c1);
-        charaktere.add(c2);
-        charaktere.add(c3);
-        charaktere.add(c4);
-        charaktere.add(c5);
+//        // Initialisierung der Produkte
+//        produkte.add(new Produkten("Kunai", 50.0, "Konoha"));
+//        produkte.add(new Produkten("Shuriken", 30.0, "Konoha"));
+//        produkte.add(new Produkten("Schwert", 200.0, "Kirigakure"));
+//        produkte.add(new Produkten("Heiltrank", 100.0, "Sunagakure"));
+//        produkte.add(new Produkten("Sprengsiegel", 75.0, "Iwagakure"));
+//        produkte.add(new Produkten("Riesenfächer", 300.0, "Sunagakure"));
+//        produkte.add(new Produkten("Giftklinge", 150.0, "Kirigakure"));
+//        produkte.add(new Produkten("Explosionskugel", 250.0, "Iwagakure"));
+//        produkte.add(new Produkten("Schattendolch", 180.0, "Konoha"));
+//        produkte.add(new Produkten("Wasserperle", 90.0, "Kirigakure"));
+//
+//        // Initialisierung der Charaktere
+//        List<Charakteren> charaktere = new ArrayList<>();
+//
+//        Charakteren c1 = new Charakteren(1, "Naruto Uzumaki", "Konoha");
+//
+//        c1.addProdukten(produkte.get(3)); // Heiltrank
+//        c1.addProdukten(produkte.get(8)); // Schattendolch
+//        c1.addProdukten(produkte.get(5)); // Riesenfächer
+//
+//        Charakteren c2 = new Charakteren(2, "Gaara", "Sunagakure");
+//        c2.addProdukten(produkte.get(2)); // Schwert
+//        c2.addProdukten(produkte.get(4)); // Sprengsiegel
+//        c2.addProdukten(produkte.get(6)); // Giftklinge
+//        c2.addProdukten(produkte.get(1)); // Shuriken
+//
+//        Charakteren c3 = new Charakteren(3, "Kisame Hoshigaki", "Kirigakure");
+//        c3.addProdukten(produkte.get(1)); // Shuriken
+//        c3.addProdukten(produkte.get(2)); // Schwert
+//        c3.addProdukten(produkte.get(3)); // Heiltrank
+//        c3.addProdukten(produkte.get(7)); // Explosionskugel
+//        c3.addProdukten(produkte.get(9)); // Wasserperle
+//
+//        Charakteren c4 = new Charakteren(4, "Deidara", "Iwagakure");
+//        c4.addProdukten(produkte.get(0)); // Kunai
+//        c4.addProdukten(produkte.get(4)); // Sprengsiegel
+//        c4.addProdukten(produkte.get(7)); // Explosionskugel
+//        c4.addProdukten(produkte.get(9)); // Wasserperle
+//
+//        Charakteren c5 = new Charakteren(5, "Itachi Uchiha", "Konoha");
+//        c5.addProdukten(produkte.get(8)); // Schattendolch
+//        c5.addProdukten(produkte.get(6)); // Giftklinge
+//        c5.addProdukten(produkte.get(2)); // Schwert
+//        c5.addProdukten(produkte.get(7)); // Explosionskugel
+//
+//        charaktere.add(c1);
+//        charaktere.add(c2);
+//        charaktere.add(c3);
+//        charaktere.add(c4);
+//        charaktere.add(c5);
 
         new View().start();
     }

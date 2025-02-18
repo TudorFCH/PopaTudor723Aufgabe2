@@ -89,11 +89,12 @@ public class Controller {
                 .collect(Collectors.toList());
     }
 
+
     public List<Produkten> sortProductsOfCharakter(int charakterID, boolean ascending){
         return charakteren.stream()
                 .filter(charakteren -> charakteren.getID() == charakterID)
                 .flatMap(charakteren -> charakteren.getPurchasedProducts().stream())
-                .sorted(Comparator.comparing(Produkten::getName,
+                .sorted(Comparator.comparing(Produkten::getPreis,
                         ascending ? Comparator.naturalOrder() : Comparator.reverseOrder()))
                 .collect(Collectors.toList());
     }
