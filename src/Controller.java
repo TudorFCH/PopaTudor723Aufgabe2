@@ -47,4 +47,12 @@ public class Controller {
     public void deleteCharakter(int ID) {
         charakteren.removeIf(charakteren -> charakteren.getID() == ID);
     }
+
+    public List<Charakteren> filterCharakterenByHerkunftsdorf(String herkunftsdorf) {
+        return charakteren.stream()
+                .filter(charakteren -> charakteren.getHerkunftsdorf().equalsIgnoreCase(herkunftsdorf))
+                .collect(Collectors.toList());
+    }
+
+
 }
