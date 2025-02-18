@@ -226,5 +226,7 @@ public class View {
         charaktere.add(c3);
         charaktere.add(c4);
         charaktere.add(c5);
+
+        new View().start();
     }
 }
