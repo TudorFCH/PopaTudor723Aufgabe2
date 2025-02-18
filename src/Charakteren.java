@@ -45,6 +45,14 @@ public class Charakteren {
         Produkten = produkten;
     }
 
+    public List<Produkten> getPurchasedProducts(){
+        return Produkten;
+    }
+
+    public void addProdukten(Produkten produkten){
+        Produkten.add(produkten);
+    }
+
     @Override
     public String toString() {
         return "Charakteren{" +
