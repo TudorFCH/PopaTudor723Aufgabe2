@@ -1,3 +1,5 @@
+package Modell;
+
 import java.util.*;
 
 public class Charakteren {
@@ -55,11 +57,11 @@ public class Charakteren {
 
     @Override
     public String toString() {
-        return "Charakteren{" +
+        return "Modell.Charakteren{" +
                 "ID=" + ID +
                 ", Name='" + Name + '\'' +
                 ", Herkunftsdorf='" + Herkunftsdorf + '\'' +
-                ", Produkten=" + Produkten +
+                ", Modell.Produkten=" + Produkten +
                 '}';
     }
 }

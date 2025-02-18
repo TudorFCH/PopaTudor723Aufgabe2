@@ -1,11 +1,11 @@
-
+package Modell;
 
 public class Produkten {
     private String Name;
-    private int Preis;
+    private double Preis;
     private String Herkunftsregion;
 
-    public Produkten(String name, int preis, String herkunftsregion) {
+    public Produkten(String name, double preis, String herkunftsregion) {
         Name = name;
         Preis = preis;
         Herkunftsregion = herkunftsregion;
@@ -19,11 +19,11 @@ public class Produkten {
         Name = name;
     }
 
-    public int getPreis() {
+    public double getPreis() {
         return Preis;
     }
 
-    public void setPreis(int preis) {
+    public void setPreis(double preis) {
         Preis = preis;
     }
 
@@ -37,7 +37,7 @@ public class Produkten {
 
     @Override
     public String toString() {
-        return "Produkten{" +
+        return "Modell.Produkten{" +
                 "Name='" + Name + '\'' +
                 ", Preis=" + Preis +
                 ", Herkunftsregion='" + Herkunftsregion + '\'' +

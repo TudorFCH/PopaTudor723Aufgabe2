@@ -1,11 +1,15 @@
+package Controller;
+
+import Modell.*;
 import java.util.*;
 import java.util.stream.Collectors;
+
 
 public class Controller {
     private final List<Produkten> produkten = new ArrayList<>();
     private final List<Charakteren> charakteren = new ArrayList<>();
 
-    public void addProdukt(String name, int preis, String herkunftsregion) {
+    public void addProdukt(String name, double preis, String herkunftsregion) {
         produkten.add(new Produkten(name, preis, herkunftsregion));
     }
 
@@ -13,7 +17,7 @@ public class Controller {
         return produkten;
     }
 
-    public void updateProduct(int index, String name, int preis, String herkunftsregion) {
+    public void updateProduct(int index, String name, double preis, String herkunftsregion) {
         if (index >= 0 && index < produkten.size()) {
             Produkten produkt = produkten.get(index);
             produkt.setName(name);
